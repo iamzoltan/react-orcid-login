@@ -1,6 +1,6 @@
 {
   "name": "react-orcid-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Component for ORCID SSO Login using OAUTH",
   "main": "src/index.js",
   "directories": {
