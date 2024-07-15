@@ -17,7 +17,12 @@
     "ORCID",
     "SSO",
     "LOGIN",
-    "OAUTH"
+    "OAUTH",
+    "react",
+    "reactjs",
+    "react-component",
+    "orcid-login",
+    "react-orcid-login"
   ],
   "author": "Konstantine Tsafatinos",
   "license": "ISC",
@@ -26,21 +31,20 @@
   },
   "homepage": "https://github.com/iamzoltan/react-orcid-login#readme",
   "devDependencies": {
-    "@babel/core": "^7.24.9",
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/plugin-syntax-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.24.8",
-    "@babel/preset-react": "^7.24.7",
-    "babel-loader": "^9.1.3"
+    "babel": "^6.5.2",
+    "babel-core": "^6.6.5",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.5.0"
   },
   "babel": {
     "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-syntax-class-properties"
+      "es2015",
+      "react",
+      "stage-0"
     ]
   }
 }
