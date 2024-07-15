@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/iamzoltan/react-orcid-login/issues"
   },
-  "homepage": "https://github.com/iamzoltan/react-orcid-login#readme"
+  "homepage": "https://github.com/iamzoltan/react-orcid-login#readme",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6"
+  }
 }
