@@ -8,7 +8,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'OrcidLogin.jsx',
+    filename: 'OrcidLogin.js',
     libraryTarget: 'umd',
     library: 'OrcidLogin'
   },
