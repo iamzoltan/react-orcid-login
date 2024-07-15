@@ -74,10 +74,10 @@ class OrcidLogin extends Component {
     }
 
     return (
-    <div>
-      <img src={logo} alt="Orcid Logo"/>
-      <button {...attrs}>{ children || buttonText }</button>
-    </div>
+      <button {...attrs} style={{ display: 'flex', alignItems: 'center' }}>
+        <img src={logo} alt="Orcid Logo" style={{ width: '18px', height: 'auto', paddingRight: '5px' }} />
+        { children || buttonText }
+      </button>
     );
   }
 }

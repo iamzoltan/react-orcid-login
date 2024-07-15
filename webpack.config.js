@@ -1,20 +1,45 @@
+'use strict';
+
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
+  devtool: 'eval',
+  entry: {
+    example: ['webpack/hot/dev-server', './example/index.js'],
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules\/(?!react-orcid-login)/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: [
-              '@babel/plugin-proposal-class-properties',
-              '@babel/plugin-syntax-class-properties'
-            ]
-          }
-        }
-      }
-    ]
+          loader: 'babel-loader'
+        },
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[hash]-[name].[ext]',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  output: {
+    filename: 'example/bundle.js'
+  },
+  resolve: {
+    extensions: ['.js'],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    contentBase: './example'
   }
 };
