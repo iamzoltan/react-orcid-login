@@ -79,4 +79,4 @@ Callback for errors raised during login.
 $ npm start
 ```
 
-Webpack development server starts at [http://localhost:8080](http://localhost:8080), loading [example/index.html](github.com/checkr/react-facebook-login/tree/master/example/index.html).
+Webpack development server starts at [http://localhost:8080](http://localhost:8080), loading [example/index.html](github.com/checkr/react-orcid-login/tree/master/example/index.html).
