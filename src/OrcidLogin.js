@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import PopupWindow from './PopupWindow';
 import { toQuery } from './utils';
+import logo from './ORCIDiD_iconvector.svg';
 
 class OrcidLogin extends Component {
   static propTypes = {
@@ -72,7 +73,12 @@ class OrcidLogin extends Component {
       attrs.className = className;
     }
 
-    return <button {...attrs}>{ children || buttonText }</button>;
+    return (
+    <div>
+      <img src={logo} alt="Orcid Logo"/>
+      <button {...attrs}>{ children || buttonText }</button>
+    </div>
+    );
   }
 }
 

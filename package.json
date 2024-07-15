@@ -1,0 +1,28 @@
+{
+  "name": "react-orcid-login",
+  "version": "1.0.0",
+  "description": "React Component for ORCID SSO Login using OAUTH",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamzoltan/react-orcid-login.git"
+  },
+  "keywords": [
+    "ORCID",
+    "SSO",
+    "LOGIN",
+    "OAUTH"
+  ],
+  "author": "Konstantine Tsafatinos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamzoltan/react-orcid-login/issues"
+  },
+  "homepage": "https://github.com/iamzoltan/react-orcid-login#readme"
+}
