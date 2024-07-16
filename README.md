@@ -72,6 +72,12 @@ Callback for successful login. An object will be passed as an argument to the ca
 
 Callback for errors raised during login.
 
+#### `isSandbox`
+
+`{bool}`
+
+Flag to decide which url to use. The sandbox or the production one.
+
 
 ## Development
 
