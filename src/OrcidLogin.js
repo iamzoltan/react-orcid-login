@@ -68,6 +68,7 @@ class OrcidLogin extends Component {
   render() {
     const { className, buttonText, children } = this.props;
     const attrs = { onClick: this.onBtnClick };
+    const logoUrl = 'https://raw.githubusercontent.com/iamzoltan/react-orcid-login/master/src/ORCIDiD_iconvector.svg';
 
     if (className) {
       attrs.className = className;
@@ -75,7 +76,7 @@ class OrcidLogin extends Component {
 
     return (
       <button {...attrs} style={{ display: 'flex', alignItems: 'center' }}>
-        <img src={logo} alt="Orcid Logo" style={{ width: '18px', height: 'auto', paddingRight: '5px' }} />
+        <img src={logoUrl} alt="Orcid Logo" style={{ width: '18px', height: 'auto', paddingRight: '5px' }} />
         { children || buttonText }
       </button>
     );
