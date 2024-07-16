@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import PopupWindow from './PopupWindow';
 import { toQuery } from './utils';
-import logo from './ORCIDiD_iconvector.svg';
 
 class OrcidLogin extends Component {
   static propTypes = {
@@ -17,6 +16,7 @@ class OrcidLogin extends Component {
     redirectUri: PropTypes.string,
     scope: PropTypes.string,
     responseType: PropTypes.string,
+    isSandbox: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -38,7 +38,7 @@ class OrcidLogin extends Component {
       response_type: responseType,
       redirect_uri: redirectUri,
     });
-    const authUrl = this.isSandbox ? `https://sandbox.orcid.org/oauth/authorize?${search}` : `https://orcid.org/oauth/authorize?${search}`;
+    const authUrl = this.props.isSandbox ? `https://sandbox.orcid.org/oauth/authorize?${search}` : `https://orcid.org/oauth/authorize?${search}`;
     const popup = this.popup = PopupWindow.open(
       'orcid-oauth-authorize',
       authUrl,
