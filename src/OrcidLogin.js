@@ -27,6 +27,7 @@ class OrcidLogin extends Component {
     onRequest: () => {},
     onSuccess: () => {},
     onFailure: () => {},
+    isSandbox: true,
   }
 
   onBtnClick = () => {
@@ -37,9 +38,10 @@ class OrcidLogin extends Component {
       response_type: responseType,
       redirect_uri: redirectUri,
     });
+    const authUrl = this.isSandbox ? `https://sandbox.orcid.org/oauth/authorize?${search}` : `https://orcid.org/oauth/authorize?${search}`;
     const popup = this.popup = PopupWindow.open(
       'orcid-oauth-authorize',
-      `https://sandbox.orcid.org/oauth/authorize?${search}`,
+      authUrl,
       { height: 1000, width: 600 }
     );
 
@@ -75,8 +77,7 @@ class OrcidLogin extends Component {
     }
 
     return (
-      <button {...attrs} style={{ display: 'flex', alignItems: 'center' }}>
-        <img src={logoUrl} alt="Orcid Logo" style={{ width: '18px', height: 'auto', paddingRight: '5px' }} />
+      <button {...attrs}>
         { children || buttonText }
       </button>
     );
