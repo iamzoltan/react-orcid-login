@@ -28,7 +28,7 @@
     "react-orcid-login"
   ],
   "author": "Konstantine Tsafatinos",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/iamzoltan/react-orcid-login/issues"
   },
